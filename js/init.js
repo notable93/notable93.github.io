@@ -35,3 +35,4 @@ $(".m-main-slider").bxSlider({
     controls:false,
     
 });
+$(".sec_banner").bxSlider({});

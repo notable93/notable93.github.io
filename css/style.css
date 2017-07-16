@@ -1,3 +1,8 @@
+
+@font-face{
+    font-family:'NanumSquareL';
+    src:url('../font/NanumSquareL.ttf') fomat("truetype");
+}
 /*css reset*/
 html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {margin: 0;padding: 0;border: 0;}article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}ol, ul {list-style: none;}blockquote, q {quotes: none;}table {border-collapse: collapse;border-spacing: 0;}a{text-decoration: none;color: #000}
 
@@ -7,7 +12,7 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
 
 
 /*layout*/
-body{overflow-x: hidden}
+body{overflow-x: hidden;font-family: 'NanumSquareL','arial'}
 .wrap{position: relative;}
 .header{position: relative;z-index: 30;}
 .body{position: relative;z-index: 20;}
@@ -57,11 +62,10 @@ body{overflow-x: hidden}
 .opening_hours{width:100%;margin: 0 auto; ;padding: 20px 0;background-color: #fff;border-bottom: 1px solid #000}
 .opening_hours .today_date{text-align: center;color: #000;margin: 0 auto ;font-size: 12px;}
 .open_info{width: 70%;margin:15px auto}
-.info_out{margin-left: 25%;}
 .info_high{font-weight: bold}
 .info_notice{margin: 15px 0;text-align: center;}
 .open_link>a{
-    display: block;
+    display:none;
     font-size: 12px;
     margin: 10px 4%;
     border: 1px solid #000;
@@ -102,8 +106,15 @@ body{overflow-x: hidden}
 .section .sec_title{display: block;font-weight: bold;font-size: 17px}
 .sec_txt_wrap .underline{display: block;width: 50px;height: 3px;background-color: #000;margin: 5px 0}
 .sec_txt1{font-size: 14px;font-weight: bold;}
-.sec_txt2{font-size: 12px;line-height: 1.6;margin: 10px 0 }
+.sec_txt2{font-size: 12px;line-height: 1.6;margin: 10px 0;width: 100%;text-align: justify}
 .sec_more{font-size: 12px;display: block;margin-top: 10px}
+
+/*bottom*/
+.banner{background-repeat: no-repeat;width:540px;height: 240px }
+.banner1{background-image: url(../images/banner1.jpg);}
+.banner2{background-image: url(../images/banner2.jpg);}
+.banner3{background-image: url(../images/banner3.jpg);}
+
 
 @media screen and (min-width:768px){
     
@@ -125,7 +136,7 @@ body{overflow-x: hidden}
     .sec_txt_wrap{float: left;margin-left: 10px}
     .underline{/*display: block;width: 50px;height: 3px;background-color:#000;margin: 10px 0*/}
     .sec_txt1{font-size: 14px;}
-    .sec_txt2{}
+    .sec_txt2{width: 190px}
     .sec_more{display: block;font-size: 12px;}
     
     
@@ -142,14 +153,14 @@ body{overflow-x: hidden}
     .opening_hours .today_date{font-size: 15px;}
     
     /*.open_link>a{display: block;font-size: 11px;text-decoration: underline;margin-top: 20px;}*/
-    .open_link>a{display: block;font-size: 13px;margin-top: 20px;}
+    .open_link>a{display: block;font-size: 13px;margin-top: 20px;display:block;}
     .opening_hours{border-top: 2px solid #F00;border-bottom: 2px solid #F00;background-color: transparent;}
 
     .open_link .info_showing{float: left;}
     .open_link .info_comming{float: right;}
     
     /*content2*/
-    .content2{width: 100%;background-color: #ddd;padding: 30px 0}
+    .content2{width: 100%;background-color: #ddd;/*padding: 10px 0*/}
     .content2_inner{background-color: #ddd;}
     .guide_wrap{width: 80%;margin:0 auto}
     .guide{width: 33.3%;text-align: center;float: left;border-bottom: none}
@@ -162,10 +173,12 @@ body{overflow-x: hidden}
     .guide .guide_txt2{font-size: 12px;}
     .guide .guide_more{display: none;width: 130px;height: 40px;background-color: #000;margin: 30px auto;border-radius: 20px;line-height: 40px;color: #fff;font-size: 12px}
     
+    /**/
+    .sec_banner_wrap{width: 50%;}
     
 }
 @media screen and (min-width:1024px){
-    .wrap{background-color:forestgreen}
+    .wrap{background-color:bisque}
     .t-main-slider-wrap{display: none}
     .header_inner{box-shadow: none}
     .slider_wrap{position: relative;}
@@ -210,14 +223,18 @@ body{overflow-x: hidden}
     
     .guide .guide_txt1{font-size: 20px;}
     .guide .guide_txt2{font-size: 14px;}
-    
+    .guide_wrap {width: 1180px;}
     /*section3*/
     .section1{width:66.6%;}
     .section2{width: 33.3%}
-    .content3_inner{width: 1180px;margin: 0 auto;background-color: #fff;}
+    .content3_inner{width: 1180px;margin:  auto;background-color: #fff;}
     .sec_edu_a{margin-top: 0;}
-    .sec_edu_c{margin-right: 30px}
-    .section_top{border-bottom: 1px solid #000;padding:30px 15px}
+    .sec_edu_c{margin-right: 20px}
+    .section_top{border-bottom: 1px solid #000;padding:35px 15px 55px;}
     
+    
+    /*sec_bottom*/
+    .sec_banner_wrap{}
+
 }
 
